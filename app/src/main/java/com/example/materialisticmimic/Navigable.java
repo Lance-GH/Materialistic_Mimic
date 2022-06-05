@@ -7,5 +7,5 @@ public interface Navigable {
     int DIRECTION_LEFT = 2;
     int DIRECTION_RIGHT = 3;
 
-    void onNavigation(int direction);
+    void onNavigate(int direction);
 }

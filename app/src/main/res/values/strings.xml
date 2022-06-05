@@ -3,4 +3,12 @@
     <string name="vote_up">Vote Up</string>
     <string name="save">Save</string>
     <string name="article">Article</string>
+    <string name="pref_theme">pref_theme</string>
+    <string name="pref_text_size">pref_text_size</string>
+    <string name="pref_font">pref_font</string>
+    <string name="pref_daynight_auto">pref_daynight_auto</string>
+    <string name="konami">You got the Konami code! Give me 5 stars?</string>
+    <string name="pref_navigation_vibrate">pref_navigation_vibrate</string>
+    <string name="hint_nav_short">Swipe \u2191 \u2193 \u2192 \u2190 to navigate \nLong press to reposition</string>
+    <string name="no_playstore">No PlayStore App Found</string>
 </resources>

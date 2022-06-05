@@ -40,7 +40,7 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behaviour="" />
+        app:layout_behaviour="@string/fab_scrolling_view_behavior" />
 
     <include
         android:id="@+id/reply_button"
@@ -52,7 +52,7 @@
 
     <include
         android:id="@+id/navigation_button"
-        layout="@layout/button_navigtion"
+        layout="@layout/button_navigation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
