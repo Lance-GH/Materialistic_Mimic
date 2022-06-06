@@ -20,7 +20,7 @@
         android:maxLines="3"
         android:text="..."
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-        android:textSize="18sp"
+        android:textSize="@dimen/titleTextSize"
         tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
 
     <LinearLayout
@@ -42,6 +42,8 @@
             android:text="..."
             android:textSize="14sp"
             android:textStyle="italic"
+            android:visibility="gone"
+            tools:visibility="visible"
             tools:text="example.com" />
 
         <TextView

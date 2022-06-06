@@ -11,4 +11,12 @@
     <string name="pref_navigation_vibrate">pref_navigation_vibrate</string>
     <string name="hint_nav_short">Swipe \u2191 \u2193 \u2192 \u2190 to navigate \nLong press to reposition</string>
     <string name="no_playstore">No PlayStore App Found</string>
+    <string name="logout">Logout</string>
+    <string name="login">Login</string>
+    <string name="title_activity_list">Top Stories</string>
+    <string name="more">More</string>
+    <string name="saved">Saved %1$s ago</string>
+    <string name="loading_text">...</string>
+    <string name="voted">Successfully voted</string>
+    <string name="view_in_browser">View in external browser</string>
 </resources>

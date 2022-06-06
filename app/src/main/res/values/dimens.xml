@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="drawer_header_height">128dp</dimen>
+    <dimen name="cardview_min_height">64dp</dimen>
+    <dimen name="padding_text">4dp</dimen>
+    <dimen name="titleTextSize">18sp</dimen>
+</resources>

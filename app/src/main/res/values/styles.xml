@@ -1,7 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- ========================= -->
+    <!-- Action bar/toolbar styles -->
+    <!-- ========================= -->
+    <style name="AppToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="searchViewStyle">@style/AppToolbarSearchView</item>
+        <item name="android:textColorSecondary">?android:attr/textColorPrimary</item>
+    </style>
+
     <style name="ThemeOverlay.App.Rating" parent="ThemeOverlay.AppCompat.Light">
         <item name="colorAccent">@color/orange400</item>
     </style>
+
+    <style name="TextAppearance.App.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="DrawerTextStyle">
+
+        <item name="android:textAppearance">@style/TextAppearance.App.Large</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">@dimen/padding</item>
+        <item name="android:paddingBottom">@dimen/padding</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
+    </style>
+
+    <dimen name="padding">8dp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+
+    <!-- =========== -->
+    <!-- Text Styles -->
+    <!-- =========== -->
+    <style name="textRankStyle">
+        <item name="android:textAppearance">@style/TextAppearance.App.Large</item>
+        <item name="android:gravity">center|center_vertical</item>
+    </style>
+
+    <style name="textSubtleStyle">
+        <item name="android:textAppearance">@style/TextAppearance.App.Subtitle</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingRight">@dimen/padding</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="TextAppearance.App.Subtitle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">?attr/subtitleTextSize</item>
+    </style>
+
+
+    <!-- =========== -->
+    <!-- Card styles -->
+    <!-- =========== -->
+    <style name="BaseAppCardView" parent="CardView">
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="AppCardView" parent="BaseAppCardView">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="FlatCardView">
+        <item name="android:background">?attr/colorCardBackground</item>
+    </style>
+
+    <!-- ================== -->
+    <!-- Search view styles -->
+    <!-- ================== -->
+    <style name="AppToolbarSearchView" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="queryHint">@string/title_activity_search</item>
+    </style>
+
+    <string name="title_activity_search">Search HN</string>
 </resources>

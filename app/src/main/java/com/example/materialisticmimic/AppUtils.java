@@ -3,6 +3,7 @@ package com.example.materialisticmimic;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Build;
 import android.text.Html;
@@ -16,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.AttrRes;
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsSession;
 
@@ -39,7 +41,8 @@ public class AppUtils {
 
 
 
-    public static void openWebUrlExternal(Context context, @Nullable WebItem item, String url, @Nullable CustomTabsSession session) {
+    public static void openWebUrlExternal(Context context, @Nullable WebItem item,
+                                          String url, @Nullable CustomTabsSession session) {
 
     }
 
@@ -102,6 +105,13 @@ public class AppUtils {
             spanned = Html.fromHtml(htmlText);
         }
         return trim(spanned);
+    }
+
+    public static int getThemedResId(Context context, @AttrRes int attr) {
+        TypedArray a = context.getTheme().obtainStyledAttributes(new int[]{attr});
+        final int resId = a.getResourceId(0, 0);
+        a.recycle();
+        return resId;
     }
 
     public static void openPlayStore(Context context) {

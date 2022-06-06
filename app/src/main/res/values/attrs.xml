@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <attr name="backgroundDrawerHeader" format="reference" />
+    <attr name="colorCardBackground" format="reference" />
+    <attr name="colorCardHighlight" format="reference" />
+    <attr name="subtitleTextSize" format="dimension|reference" />
+
+    <declare-styleable name="TintableTextView">
+        <attr name="iconStart" format="reference" />
+        <attr name="iconEnd" format="reference" />
+        <attr name="iconTop" format="reference" />
+        <attr name="iconBottom" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="StoryView">
+        <attr name="local" format="boolean"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    tools:layout_height="match_parent"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.RelativeLayout">
+
+    <View android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@id/title"
+        android:layout_alignLeft="@id/title"
+        android:layout_alignTop="@id/title"
+        android:layout_alignEnd="@id/title"
+        android:layout_alignRight="@id/title"
+        android:layout_alignBottom="@id/comment" />
+
+    <com.example.materialisticmimic.widget.TextView
+        android:id="@+id/title"
+        style="@style/textTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cardview_min_height"
+        android:layout_marginLeft="@dimen/cardview_min_height"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/loading_text" />
+
+    <com.example.materialisticmimic.widget.TintableTextView
+        android:id="@+id/source"
+        style="@style/textSubtitleStyle.Italic"
+        android:layout_below="@id/title"
+        android:layout_marginStart="@dimen/cardview_min_height"
+        android:layout_marginLeft="@dimen/cardview_min_height"
+        android:layout_toLeftOf="@id/comment"
+        android:text="@string/loading_text" />
+
+    <TextView
+        android:id="@+id/posted"
+        style="@style/textSubtitleStyle"
+        android:layout_below="@id/source"
+        android:layout_marginStart="@dimen/cardview_min_height"
+        android:layout_marginLeft="@dimen/cardview_min_height"
+        android:layout_toLeftOf="@id/comment"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/padding"
+        android:text="@string/loading_text" />
+
+    <include
+        android:id="@+id/comment"
+        layout="@layout/button_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/title"
+        android:layout_toLeftOf="@id/button_more" />
+
+    <include
+        android:id="@+id/button_more"
+        layout="@layout/button_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/comment"
+        android:layout_alignBottom="@id/comment"
+        android:layout_alignParentRight="true" />
+
+    <!-- This is new -->
+    <ViewSwitcher android:id="@+id/vote_switcher"
+        android:layout_width="@dimen/cardview_min_height"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/title"
+        android:layout_alignBottom="@id/title"
+        android:background="?attr/colorCardHighlight"
+        android:inAnimation="@anim/slide_in_up"
+        android:outAnimation="@anim/slide_out_down">
+
+        <TextView
+            android:id="@+id/rank"
+            style="@style/textRankStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="46"/>
+
+        <ImageView
+            android:contentDescription="@string/voted"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/greenA700" />
+
+    </ViewSwitcher>
+
+    <ImageView
+        android:id="@+id/bookmarked"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/saved"
+        android:gravity="top|start"
+        android:src="@drawable/ic_bookmark_white_24dp"
+        android:visibility="invisible"
+        app:tint="@color/orange400" />
+
+    <TextView
+        android:id="@+id/score"
+        style="@style/textSubtleStyle"
+        android:layout_width="@dimen/cardview_min_height"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vote_switcher"
+        android:layout_gravity="center"
+        android:background="?attr/colorCardHighlight"
+        android:gravity="center|top"
+        android:maxLines="1"
+        android:text="128 pts" />
+
+    <View
+        android:layout_width="@dimen/cardview_min_height"
+        android:layout_height="match_parent"
+        android:layout_below="@id/score"
+        android:layout_alignBottom="@id/comment"
+        android:background="?attr/colorCardHighlight" />
+</merge>
