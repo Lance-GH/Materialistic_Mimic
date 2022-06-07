@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Build;
 import android.text.Html;
@@ -12,8 +13,10 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -142,5 +145,15 @@ public class AppUtils {
     public static boolean urlEquals(String thisUrl, String thatUrl) {
 
         return false;
+    }
+
+    public static int getDisplayHeight(Context context) {
+        Display display = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay();
+
+        Point point = new Point();
+        display.getSize(point);
+
+        return point.y;
     }
 }

@@ -18,6 +18,7 @@ abstract class BaseListFragment extends BaseFragment implements Scrollable {
     CustomTabsDelegate mCustomTabsDelegate;
     private KeyDelegate.RecyclerViewHelper mScrollableHelper;
     protected RecyclerView mRecyclerView;
+    private final Preferences.Observable mPreferenceObservable = new Preferences.Observable();
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -27,11 +28,19 @@ abstract class BaseListFragment extends BaseFragment implements Scrollable {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mRecyclerView.setLayoutManager(new SnappyLinearLayoutManager(getActivity(), false));
+        final int verticalMargin = getResources().getDimensionPixelSize(R.dimen.cardview_vertical_margin);
+        final int horizontalMargin = getResources().getDimensionPixelSize(R.dimen.cardview_horizontal_margin);
+        final int divider = getResources().getDimensionPixelSize(R.dimen.divider);
+
+        mRecyclerView.addItemDecoration(new RecyclerView.ItemDecoration() {
+        });
     }
 
     @Override
