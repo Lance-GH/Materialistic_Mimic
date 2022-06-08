@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/BaseAppCardView"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <View
+            android:id="@+id/level"
+            tools:visibility="visible"
+            android:visibility="gone"
+            tools:background="@color/red500"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"/>
+        
+        <LinearLayout
+            android:id="@+id/content"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            style="@style/FlatCardView">
+            
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/posted"
+                    tools:text="2 days ago"
+                    android:text="@string/loading_text"
+                    style="@style/textSubtitleStyle"
+                    android:paddingRight="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical" />
+
+                <include layout="@layout/button_more"
+                    android:id="@+id/button_more"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp" />
+
+            </LinearLayout>
+
+            <com.example.materialisticmimic.widget.TextView
+                android:id="@+id/text"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n"
+                android:text="@string/loading_text"
+                style="@style/textContentStyle"
+                android:textIsSelectable="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            
+            <TextView
+                android:id="@+id/more"
+                android:text="Read all %1$d lines"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
+                android:paddingTop="@dimen/padding"
+                android:paddingBottom="@dimen/padding"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                style="@style/textSubtitleStyle" />
+            
+            <FrameLayout
+                android:id="@+id/button_toggle"
+                android:foreground="?attr/selectableItemBackground"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/listPreferredItemHeightSmall">
+
+                <com.example.materialisticmimic.widget.TintableTextView
+                    android:id="@+id/toggle"
+                    tools:text="Hide comments"
+                    app:iconEnd="@drawable/ic_expand_less_white_24dp"
+                    android:drawablePadding="8dp"
+                    style="@style/textSubtitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center" />
+
+            </FrameLayout>
+
+            <include
+                layout="@layout/button_comment"
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="end"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

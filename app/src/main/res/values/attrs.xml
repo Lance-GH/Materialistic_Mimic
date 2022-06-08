@@ -5,6 +5,8 @@
     <attr name="colorCardBackground" format="reference" />
     <attr name="colorCardHighlight" format="reference" />
     <attr name="subtitleTextSize" format="dimension|reference" />
+    <attr name="contentTextSize" format="dimension|reference" />
+    <attr name="titleTextSize" format="dimension|reference" />
 
     <declare-styleable name="TintableTextView">
         <attr name="iconStart" format="reference" />
@@ -16,4 +18,5 @@
     <declare-styleable name="StoryView">
         <attr name="local" format="boolean"/>
     </declare-styleable>
+
 </resources>
