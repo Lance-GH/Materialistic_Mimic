@@ -13,7 +13,9 @@ import android.text.Spannable;
 import android.text.TextUtils;
 import android.text.style.ClickableSpan;
 import android.text.style.URLSpan;
+import android.view.ContextThemeWrapper;
 import android.view.Display;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -155,5 +157,10 @@ public class AppUtils {
         display.getSize(point);
 
         return point.y;
+    }
+
+    public static LayoutInflater createLayoutInflater(Context context) {
+        return LayoutInflater.from(new ContextThemeWrapper(context,
+                Preferences.Theme.resolvePreferredTextSize(context)));
     }
 }

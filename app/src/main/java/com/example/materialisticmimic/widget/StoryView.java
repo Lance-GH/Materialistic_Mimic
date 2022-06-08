@@ -135,7 +135,7 @@ public class StoryView extends RelativeLayout implements Checkable {
 
     }
 
-    public void setViewed() {
+    public void setViewed(boolean isViewed) {
 
     }
 

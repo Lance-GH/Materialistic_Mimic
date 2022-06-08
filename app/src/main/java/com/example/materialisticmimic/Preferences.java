@@ -6,10 +6,13 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
 import androidx.annotation.VisibleForTesting;
 
 import com.example.materialisticmimic.annotation.PublicApi;
+import com.example.materialisticmimic.preference.ThemePreference;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -34,6 +37,38 @@ public class Preferences {
     static boolean get(Context context, @StringRes int key, boolean defaultValue) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(key), defaultValue);
+    }
+
+    public static class Theme {
+
+        public static void apply(Context context, boolean dialogTheme, boolean isTranslucent) {
+            ThemePreference.ThemeSpec themeSpec = getTheme(context, isTranslucent);
+            context.setTheme(themeSpec.theme);
+        }
+
+        static @Nullable String getTypeface(Context context) {
+
+        }
+
+        static @Nullable String getReadabilityTypeface(Context context) {
+
+        }
+
+        public static @StyleRes int resolveTextSize(String choice) {
+
+        }
+
+        public static @StyleRes int resolvePreferredTextSize(Context context) {
+
+        }
+
+        private static ThemePreference.ThemeSpec getTheme(Context context, boolean isTranslucent) {
+            return ThemePreference.getTheme(get(context, "pref_theme", null), isTranslucent);
+        }
+    }
+
+    public static class Offline {
+
     }
 
     public static class Observable {

@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.materialisticmimic.widget.ListRecyclerViewAdapter;
+
 import javax.inject.Inject;
 
 abstract class BaseListFragment extends BaseFragment implements Scrollable {
