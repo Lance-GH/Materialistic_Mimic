@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/drawer_display"
+                android:text="Display"
+                app:iconStart="@drawable/ic_palette_white_24dp"
+                style="@style/DrawerTextStyle" />
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/menu_comments"
+                android:text="@string/comments"
+                app:iconStart="@drawable/ic_format_size_white_24dp"
+                style="@style/DrawerTextStyle" />
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/menu_readability"
+                android:text="@string/readability"
+                app:iconStart="@drawable/ic_local_library_white_24dp"
+                style="@style/DrawerTextStyle" />
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/drawer_offline"
+                android:text="@string/offline"
+                app:iconStart="@drawable/ic_cloud_off_white_24dp"
+                style="@style/DrawerTextStyle" />
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/drawer_about"
+                android:text="@string/title_activity_about"
+                app:iconStart="@drawable/ic_info_white_24dp"
+                style="@style/DrawerTextStyle" />
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+            <com.example.materialisticmimic.widget.TintableTextView
+                android:id="@+id/drawer_release"
+                android:text="@string/title_activity_release"
+                app:iconStart="@drawable/ic_new_releases_white_24dp"
+                style="@style/DrawerTextStyle"/>
+
+            <View
+                android:background="@color/blackT12"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

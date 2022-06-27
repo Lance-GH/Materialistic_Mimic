@@ -45,9 +45,15 @@ public class AppUtils {
     private static final String HOST_USER = "user";
 
 
-
     public static void openWebUrlExternal(Context context, @Nullable WebItem item,
                                           String url, @Nullable CustomTabsSession session) {
+
+        if (!hasConnection(context)) {
+            context.startActivity(new Intent(context, OfflineWebActivity.class)
+                    .putExtra(OfflineWebActivity.EXTRA_URL, url);
+            return;
+        }
+        Intent intent = createViewIntent(context, item, url, session);
 
     }
 

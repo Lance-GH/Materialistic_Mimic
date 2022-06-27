@@ -76,4 +76,18 @@
     <string name="login_note">Your credentials will be stored securely under your device's Settings / Account</string>
     <string name="create_account">Create account</string>
     <string name="comment_hint">Comment</string>
+    <string name="sending">Sending...</string>
+    <string name="item_exist">Similar story has been submitted</string>
+
+
+    <string name="application_info_text">
+        <![CDATA[
+            <p>Version: %1$s (%2$d)</p>
+            <p>This application is open source at <a href="https://github.com/hidroh/materialistic">github.com/hidroh/materialistic</a></p>
+        ]]>
+    </string>
+    <string name="offline">Offline</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_release">What\'s New</string>
+    <string name="comments">Comments</string>
 </resources>
