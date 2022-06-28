@@ -12,6 +12,7 @@
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_add_white_24dp.xml" value="0.164" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" value="0.1355" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_bookmark_border_white_24dp.xml" value="0.1525" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_chat_bubble_outline_white_48dp.xml" value="0.1625" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_chrome_reader_mode_black_24dp.xml" value="0.1585" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_clear_white_24dp.xml" value="0.1625" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_comment_white_24dp.xml" value="0.1535" />
@@ -33,24 +34,38 @@
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/drawable/ic_volume_up_black_24dp.xml" value="0.1505" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout-land/activity_compose.xml" value="0.23236331569664903" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout-w820dp-land/activity_compose.xml" value="0.17637215528781794" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout-w820dp-land/activity_list.xml" value="0.17637215528781794" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout-w820dp/activity_list.xml" value="0.205859375" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_about.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_compose.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_list.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_main.xml" value="0.2604166666666667" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_preferences.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_release.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_settings.xml" value="0.2" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/activity_submit.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/button_comment.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/button_more.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/button_navigation.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/button_reply.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/dialog_konami.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/drawer.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/empty_favorite.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/empty_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/empty_list.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/empty_search.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/fragment_item.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_comment.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_favorite.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_footer.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_header.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_story.xml" value="0.27447916666666666" />
-        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_submission.xml" value="0.27447916666666666" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/item_submission.xml" value="0.264" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/preference_theme.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/story_view.xml" value="0.25" />
+        <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/theme_view.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/toolbar.xml" value="0.27447916666666666" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/toolbar_web.xml" value="0.22" />
         <entry key="..\:/AppDevelopment/MaterialisticMimic/app/src/main/res/layout/user_header.xml" value="0.27447916666666666" />

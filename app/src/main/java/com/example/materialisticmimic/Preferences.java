@@ -117,6 +117,10 @@ public class Preferences {
         }
     }
 
+    public static String getUsername(Context context) {
+        return get(context, R.string.pref_username, null);
+    }
+
     public interface Observer {
         void onPreferenceChanged(@StringRes int key, boolean contextChanged);
     }

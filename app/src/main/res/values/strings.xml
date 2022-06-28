@@ -90,4 +90,21 @@
     <string name="title_activity_about">About</string>
     <string name="title_activity_release">What\'s New</string>
     <string name="comments">Comments</string>
+    <string name="read_more">Read all %1$d lines</string>
+    <string name="end_of_thread">End Of Thread</string>
+    <string name="pref_username">pref_username</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_black">Black</string>
+    <string name="theme_sepia">Sepia</string>
+    <string name="theme_green">Green</string>
+    <string name="theme_solarized">Solarized</string>
+    <string name="theme_solarized_dark">Solarized Dark</string>
+    <string name="submit_content_hint">URL or text</string>
+    <string name="submit_note">Enter text to submit a question for discussion, or URL to submit a link. You can also share links directly from other apps</string>
+    <string name="love_it">I Love It</string>
+    <string name="got_it">Got it</string>
+    <string name="try_me">Long press/swipe one to save it for later</string>
+    <string name="no_saved_stories">No saved stories so far</string>
+    <string name="no_comments">It\'s still quiet here</string>
 </resources>

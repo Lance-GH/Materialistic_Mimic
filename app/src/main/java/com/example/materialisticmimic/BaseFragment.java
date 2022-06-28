@@ -63,4 +63,12 @@ public abstract class BaseFragment extends Fragment {
         return mAttached;
     }
 
+    protected void createOptionsMenu(Menu menu, MenuInflater inflater) {
+        // override to create options menu
+    }
+
+    protected void prepareOptionsMenu(Menu menu) {
+        // override to prepare options menu
+    }
+
 }

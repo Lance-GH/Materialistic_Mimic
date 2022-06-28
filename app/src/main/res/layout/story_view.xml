@@ -105,7 +105,7 @@
 
     <TextView
         android:id="@+id/score"
-        style="@style/textSubtleStyle"
+        style="@style/textSubtitleStyle"
         android:layout_width="@dimen/cardview_min_height"
         android:layout_height="wrap_content"
         android:layout_below="@id/vote_switcher"

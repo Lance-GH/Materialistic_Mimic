@@ -1,10 +1,16 @@
 package com.example.materialisticmimic;
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
+import android.graphics.Matrix;
 import android.graphics.Point;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.text.Html;
@@ -18,6 +24,7 @@ import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +32,7 @@ import android.widget.Toast;
 import androidx.annotation.AttrRes;
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsSession;
+import androidx.core.util.Pair;
 
 import com.example.materialisticmimic.data.WebItem;
 
@@ -139,6 +147,11 @@ public class AppUtils {
         }
     }
 
+    public static void showAccountChooser(final Context context, AlertDialogBuilder alertDialogBuilder,
+                                          Account[] accounts) {
+
+    }
+
     private static CharSequence trim(CharSequence charSequence) {
         if (TextUtils.isEmpty(charSequence)) {
             return charSequence;
@@ -168,5 +181,73 @@ public class AppUtils {
     public static LayoutInflater createLayoutInflater(Context context) {
         return LayoutInflater.from(new ContextThemeWrapper(context,
                 Preferences.Theme.resolvePreferredTextSize(context)));
+    }
+
+    public static boolean isOnWifi(Context context) {
+        NetworkInfo activeNetwork = ((ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+
+        return activeNetwork != null && activeNetwork.isConnectedOrConnecting() &&
+                activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+    }
+
+    public static boolean hasConnection(Context context) {
+        NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnectedOrConnecting();
+    }
+
+    public static Pair<String, String> getCredentials(Context context) {
+        String username = Preferences.getUsername(context);
+        if (TextUtils.isEmpty(username)) {
+            return null;
+        }
+
+        AccountManager accountManager = AccountManager.get(context);
+        Account[] accounts = accountManager.getAccountsByType(BuildConfig.APPLICATION_ID);
+
+        for (Account account : accounts) {
+            if (TextUtils.equals(username, account.name)) {
+                return Pair.create(username, accountManager.getPassword(account));
+            }
+        }
+
+        return null;
+    }
+
+    public static boolean urlEquals(String thisUrl, String thatUrl) {
+        if (AndroidUtils.TextUtils.isEmpty(thisUrl) || AndroidUtils.TextUtils.isEmpty(thatUrl)) {
+            return false;
+        }
+    }
+
+    static class SystemUiHelper {
+        private final Window window;
+        private final int originalUiFlags;
+        private boolean enabled = true;
+
+        SystemUiHelper(Window window) {
+            this.window = window;
+            this.originalUiFlags = window.getDecorView().getSystemUiVisibility();
+        }
+
+        @SuppressLint("InlinedApi")
+        void setFullscreen(boolean fullscreen) {
+            if (!enabled) {
+                return;
+            }
+
+            if (fullscreen) {
+                window.getDecorView().setSystemUiVisibility(originalUiFlags |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            } else {
+                window.getDecorView().setSystemUiVisibility(originalUiFlags);
+            }
+        }
+
+        void setEnabled(boolean enabled) {
+            this.enabled = enabled;
+        }
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/title"
+        android:layout_height="128dp"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/cardview_elevation"
+        android:background="?attr/colorCardHighlight">
+        
+        <ImageView
+            android:src="?attr/backgroundDrawerHeader"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:text="@string/title_activity_release"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_height="?attr/listPreferredItemHeightSmall" />
+
+    </FrameLayout>
+    
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:scrollbars="none"
+        android:layout_below="@id/title"
+        android:layout_above="@id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_above="@id/button_rate"
+        android:background="@color/blackT12"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider" />
+
+    <Button
+        android:id="@+id/button_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/love_it"
+        android:layout_above="@id/button_ok"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button_ok"
+        android:text="@string/got_it"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

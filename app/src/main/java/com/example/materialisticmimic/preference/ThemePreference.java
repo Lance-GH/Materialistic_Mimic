@@ -34,17 +34,25 @@ public class ThemePreference extends Preference {
         BUTTONS.put(R.id.theme_solarized_dark, SOLARIZED_DARK);
 
         VALUES.put(LIGHT, new DayNightSpec(R.string.theme_light));
-        VALUES.put(DARK, new DayNightSpec(R.string.theme_dark));
-        VALUES.put(BLACK, new DayNightSpec(R.string.theme_black, R.style.Black));
+        VALUES.put(DARK, new DarkSpec(R.string.theme_dark));
+        VALUES.put(BLACK, new DarkSpec(R.string.theme_black, R.style.Black));
         VALUES.put(SEPIA, new DayNightSpec(R.string.theme_sepia, R.style.Sepia));
         VALUES.put(GREEN, new DayNightSpec(R.string.theme_green, R.style.Green));
         VALUES.put(SOLARIZED, new DayNightSpec(R.string.theme_solarized, R.style.Solarized));
-        VALUES.put(SOLARIZED_DARK, new DayNightSpec(R.string.theme_solarized_dark,
+        VALUES.put(SOLARIZED_DARK, new DarkSpec(R.string.theme_solarized_dark,
                 R.style.Solarized_Dark));
+    }
+
+    private String mSelectedTheme;
+
+    public static ThemeSpec getTheme(String value, boolean isTranslucent) {
+        ThemeSpec themeSpec = VALUES.get(VALUES.containsKey(value) ? value : LIGHT);
+        return isTranslucent ? themeSpec.getTranslucent() : themeSpec;
     }
 
     public ThemePreference(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setLayoutResource(R.layout.preference_theme);
     }
 
     public ThemePreference(Context context, AttributeSet attrs) {
@@ -65,6 +73,25 @@ public class ThemePreference extends Preference {
         }
 
         ThemeSpec getTranslucent() { return this; }
+    }
+
+    static class DarkSpec extends ThemeSpec {
+
+        DarkSpec(@StringRes int summary) {
+            this(summary, -1);
+        }
+
+        DarkSpec(@StringRes int summary, @StyleRes int themeOverrides) {
+            super(summary, R.style.AppTheme_Dark, themeOverrides);
+        }
+
+        @Override
+        ThemeSpec getTranslucent() {
+            if (translucent == null) {
+                translucent = new ThemeSpec(summary, R.style.AppTheme_Dark_Translucent, themeOverrides);
+            }
+            return translucent;
+        }
     }
 
     public static class DayNightSpec extends ThemeSpec {
